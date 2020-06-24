@@ -12,7 +12,10 @@ GameObject:
   - component: {fileID: 4911012420634013762}
   - component: {fileID: -4662185783261240952}
   - component: {fileID: 387446552049018406}
-  m_Layer: 0
+  - component: {fileID: 374233845244326687}
+  - component: {fileID: -1107156147681785255}
+  - component: {fileID: 2826928131680986009}
+  m_Layer: 9
   m_Name: Bernard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,3 +111,66 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  projectile: {fileID: 5888110485576381856, guid: f44a81b4e318c6c488ec94e917b8833b,
+    type: 3}
+  projectileSpeed: 10
+  deathVFX: {fileID: 9072185313621020629, guid: 5cd6de89e9289dc4a8fcecb20d944644,
+    type: 3}
+  durationOfExplosion: 0.3
+  deathSFX: {fileID: 8300000, guid: 44ea7fff145c5d94db6a468f06ce37bf, type: 3}
+  deathSoundVolume: 0.438
+  shootSound: {fileID: 8300000, guid: 76ecc4ffe9daa5b498f54b528ac1fd11, type: 3}
+  shootSoundVolume: 0.19
+--- !u!58 &374233845244326687
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967722166740105336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.42
+--- !u!50 &-1107156147681785255
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967722166740105336}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &2826928131680986009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6967722166740105336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f79dfdfe860c0e48a732236fa5d1a7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 200
